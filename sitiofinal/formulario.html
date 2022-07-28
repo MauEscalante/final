@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilocontacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>contactos</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="encabezado">The champions  </h1>
+            <h2 class="subtitulo">Las mejores pizzas de latino america</h2>
+            
+            <div class="opciones">
+                <div class="botones"><a href="index.html">Inicio</a></div>
+                <div class="botones"><a href="formulario.html">Contacto</a></div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="Contacto">
+        <main>
+            <form action="" class="formulario" id="formulario" method="post">
+                <!-- Grupo: nombre -->
+                <div class="formulario_grupo " id="grupo_nombre">
+                    <label for="nombre" class="formulario_label">Nombre</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" name="nombre" id="nombre" placeholder="Mauricio">
+                    </div>
+                    <p class="formulario_input-error">El nombre  solo puede contener letras .</p>
+                </div>
+
+                <!-- Grupo: Apellido -->
+                <div class="formulario_grupo" id="grupo_apellido">
+                    <label for="apellido" class="formulario_label">Apellido</label>
+                    <div class="formulario_grupo-input">
+                        <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="Escalante">
+                    </div>
+                    <p class="formulario_input-error">El apellido  solo puede contener letras .</p>
+                </div>
+
+                <div class="formulario_grupo" id="grupo_edad">
+                    <label for="edad" class="formulario_label">edad </label>
+                    <div class="formulario_grupo-input">
+                        <input type="number" class="formulario_input" name="edad" id="edad" placeholder="20">
+                        
+                    </div>
+                    <p class="formulario_input-error">El edad solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+
+
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario_grupo" id="grupo_correo">
+                    <label for="correo" class="formulario_label">Correo Electrónico</label>
+                    <div class="formulario_grupo-input">
+                        <input type="email" class="formulario_input" name="correo" id="correo" placeholder="ejemplo@gmail.com">
+                    </div>
+                    <p class="formulario_input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                </div>
+
+                <div class="formulario_grupo" id="grupo_comentarios">
+                    <label for="Comentarios" class="formulario_label"> Comentarios</label>
+                    <input type="text" class="formulario_input" id="grupo_comentarios" placeholder="comentarios">
+                  </div>
+
+                
+
+                
+
+                <div class="formulario_mensaje" id="formulario_mensaje">
+                    <p> Por favor rellena el formulario correctamente. </p>
+                </div>
+
+                <div class="formulario_grupo formulario_grupo-btn-enviar">
+                    <button type="submit" class="formulario_btn">Enviar</button>
+                    <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado correctamente!</p>
+                </div>
+            </form>
+        </main>
+    </section>
+    <script src="validacion.js"></script>
+    
+</body>
+</html>

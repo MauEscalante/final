@@ -1,0 +1,223 @@
+body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: darkgray;
+}
+
+
+
+.header{
+    background-color: rgba(80, 75, 10, 0.4);
+    width: 100%;
+    height: auto;
+    margin: 0%;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.encabezado{
+    color: #d40015;
+    text-align: center;
+    -webkit-text-stroke-width:  0.05vw;
+    -webkit-text-stroke-color: black;
+    font-family: 'Patua One', cursive;
+    font-size: 70px;
+    font-weight: bolder;
+    margin: 0%;
+}
+
+.subtitulo{
+    border: 0px solid;
+    color:rgb(255, 255, 255);
+    text-align: center;
+    -webkit-text-stroke-width:  0.05vw;
+    -webkit-text-stroke-color: black;
+    font-family: 'Lato', sans-serif; 
+    margin: 1%;
+    font-size: 35px;
+    width: 100%;
+}
+
+.opciones{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .opciones>.botones{
+        margin-inline:  auto;
+        font-size: 25px;
+        font-weight: 100;
+            
+    }
+
+    .opciones>.botones>a{
+        color: white;
+        text-decoration: none;  
+        font-family: 'century gothic',sans-serif;
+        font-weight: bold;
+        padding: 2% 5%;
+        -webkit-transition:all 500ms ease ;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+        border-radius: 50px ;
+        
+    }
+    .opciones>.botones>a:hover{
+        background: black;  
+    }
+
+
+
+
+main {
+	max-width: 800px;
+	width: 37%;
+	margin: auto;
+	padding: 40px;
+    margin-top: 15vw;
+	background-color: rgb(235, 235, 235);
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px; 
+      
+}
+
+/* Nombre del campo */
+.formulariol_label {
+    display: block;
+    color: darkgoldenrod;
+    cursor: pointer;
+}
+
+.formulario_grupo-input {
+    position: relative;
+}
+
+.formulario_input {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border: solid transparent;
+    height: 20px;
+    padding:  20px 10px;
+    transition: .3ms ease all;
+}
+
+.formulario_input:focus {
+    background-color: rgba(0, 117, 255,0.1  );
+    outline: 0;
+}
+
+/* que hace cuando el input es incorrecto? */
+.formulario_input-error {
+    font-size: 15px;
+    margin-bottom: 0;
+    display: none;
+}
+
+/* Mostrar error*/
+.formulario_input-error-activo {
+    display: block;
+}
+
+.formulario_validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+
+
+
+/* el boton, mensaje y checkbox */
+.formulario_grupo-terminos, 
+.formulario_mensaje,
+.formulario_grupo-btn-enviar {
+    grid-column: span 2;
+}
+
+/* Mensaje de error */
+.formulario_mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: rgb(246, 50, 50);
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+/* mostrar el mensaje cuando suceda el error*/
+.formulario_mensaje-activo {
+    display: block;
+}
+
+/* texto de error*/
+.formulario_mensaje p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* alineacion del boton de enviar y mensaje de exito*/
+.formulario_grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* boton de submit*/
+.formulario_btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+/* mensaje exitoso*/
+
+.formulario_mensaje-exito {
+
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(17, 190, 0);
+    display: none;
+}
+
+.formulario_mensaje-exito-activo {
+    display: block;
+}
+
+ /* Estilos para Validacion */
+
+
+
+
+.formulario_grupo-correcto .formulario_input {
+    border: 3px solid rgb(30, 209, 45);
+    opacity: 1;
+}
+
+ /* lo que realiza con el nombre del campo si el input es erroneo */
+.formulario_grupo-incorrecto .formulario_label {
+    color: rgb(187, 41, 41);
+}
+
+
+ .formulario_grupo-incorrecto .formulario_input {
+    border: 3px solid rgb(187, 41, 41);
+}
